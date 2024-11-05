@@ -1,16 +1,18 @@
 <div class="big-card-container">
   <div class="big-card-photo">
     <img
-    src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
+    src="{{ photoCover }}"
     alt="Imagem de PlaceHolder"
     width="400px"
     >
   </div>
 
   <div class="big-card-title">
-    <h1><a href="#">Saiu a nova versão do Angular</a></h1>
+    <h1><a href="#">{{ cardTitle }}</a></h1>
   </div>
   <div class="big-card-text">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore hic fugiat maxime, sapiente autem asperiores repudiandae aperiam dicta aliquid culpa incidunt accusantium molestias voluptatum facere necessitatibus, quisquam, explicabo laborum laboriosam.</p>
+    <p>
+      {{ cardText }}
+    </p>
   </div>
 </div>
