@@ -1,16 +1,25 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterModule } from '@angular/router';  // Importando o RouterModule
+import { routes } from './app.routes';  // Importando as rotas do arquivo app.route.ts
 import { MenuTitleComponent } from "./components/menu-title/menu-title.component";
 import { BigCardComponent } from "./components/big-card/big-card.component";
 import { HomeComponent } from "./pages/home/home.component";
 import { MenuBarComponent } from "./components/menu-bar/menu-bar.component";
+import { ContentComponent } from './pages/content/content.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, MenuTitleComponent, BigCardComponent, HomeComponent, MenuBarComponent],
+  imports: [
+    RouterModule,
+    MenuTitleComponent,
+    BigCardComponent,
+    HomeComponent,
+    MenuBarComponent,
+    ContentComponent
+  ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   title = 'angular-blog';

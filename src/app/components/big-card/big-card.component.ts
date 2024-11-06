@@ -1,11 +1,12 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { RouterLink, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-big-card',
   standalone: true,
-  imports: [],
+  imports: [RouterModule, RouterLink],
   templateUrl: './big-card.component.html',
-  styleUrl: './big-card.component.css'
+  styleUrls: ['./big-card.component.css', './big-card.responsive.component.css'],
 })
 export class BigCardComponent implements OnInit {
   @Input()
@@ -14,6 +15,8 @@ export class BigCardComponent implements OnInit {
   cardTitle: string = ""
   @Input()
   cardText: string = ""
+  @Input()
+  cardId:string="0"
 
   constructor(){}
 
